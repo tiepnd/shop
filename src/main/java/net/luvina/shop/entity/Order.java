@@ -13,10 +13,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table
+@Table(name="orders")
 @NoArgsConstructor
 @Data
-public class Order {
+public class Order extends BaseEntity{
 	@ManyToOne
 	@JoinColumn(name = "customer_id", nullable = false)
 	private Customer customer;
